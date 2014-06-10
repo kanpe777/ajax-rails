@@ -3,11 +3,4 @@
 <%= button_to "Add", action: :add %>
 <%= button_to "Clear", { action: :clear }, { method: :delete } %>
 
-<ul>
-  <% @dates.each do |date| %>
-  <li>
-    <%= date.org_value %>
-    <%= button_to "Delete", { action: :destroy, id: date.id }, { method: :delete } %>
-  </li>
-  <% end %>
-</ul>
+<%= render 'dates' %>

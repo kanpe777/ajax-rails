@@ -1,0 +1,8 @@
+<ul>
+  <% @dates.each do |date| %>
+  <li>
+    <%= date.org_value %>
+    <%= button_to "Delete", { action: :destroy, id: date.id }, { method: :delete } %>
+  </li>
+  <% end %>
+</ul>
